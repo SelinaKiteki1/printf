@@ -116,7 +116,7 @@ flags, 'X', width, precision, size));
 * @width: get width or is a specifier
 * @precision: Precision specification
 * @size: Size specifier in the function
-* @map_to: Array of values to map the number to
+* @map_to: Array of values to map the number to in the function
 * @flag_ch: Calculates active flags
 * Return: Num_of_chars_printed.
 */
