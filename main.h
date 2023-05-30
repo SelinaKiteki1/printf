@@ -18,22 +18,22 @@
 #define S_SHORT 1
 
 /**
- * struct fmt - Struct in the function.
- * @fmt: The format used in the function.
- * @fn: The function associated with the function.
- */
+* struct fmt - Struct in the function.
+* @fmt: The format used in the function.
+* @fn: The function associated with the function.
+*/
 struct fmt
 {
-	char fmt;
-	int (*fn)(va_list, char[], int, int, int, int);
+char fmt;
+int (*fn)(va_list, char[], int, int, int, int);
 };
 
 
 /**
- * typedef struct fmt fmt_t - Struct in the function.
- * @fmt: The formatin the function.
- * @fm_t: The function associated in the function.
- */
+* typedef struct fmt fmt_t - Struct in the function.
+* @fmt: The formatin the function.
+* @fm_t: The function associated in the function.
+*/
 typedef struct fmt fmt_t;
 
 int _printf(const char *format, ...);
@@ -42,25 +42,25 @@ va_list list, char buffer[], int flags, int width, int precision, int size);
 
 /* Funtions to print chars and strings used in the function */
 int print_char(va_list types, char buffer[],
-	int flags, int width, int precision, int size);
+int flags, int width, int precision, int size);
 int print_string(va_list types, char buffer[],
-	int flags, int width, int precision, int size);
+int flags, int width, int precision, int size);
 int print_percent(va_list types, char buffer[],
-	int flags, int width, int precision, int size);
+int flags, int width, int precision, int size);
 
 /* Functions to print numbers */
 int print_int(va_list types, char buffer[],
-	int flags, int width, int precision, int size);
+int flags, int width, int precision, int size);
 int print_binary(va_list types, char buffer[],
-	int flags, int width, int precision, int size);
+int flags, int width, int precision, int size);
 int print_unsigned(va_list types, char buffer[],
-	int flags, int width, int precision, int size);
+int flags, int width, int precision, int size);
 int print_octal(va_list types, char buffer[],
-	int flags, int width, int precision, int size);
+int flags, int width, int precision, int size);
 int print_hexadecimal(va_list types, char buffer[],
-	int flags, int width, int precision, int size);
+int flags, int width, int precision, int size);
 int print_hexa_upper(va_list types, char buffer[],
-	int flags, int width, int precision, int size);
+int flags, int width, int precision, int size);
 
 int print_hexa(va_list types, char map_to[],
 char buffer[], int flags, char flag_ch, int width, int precision, int size);
@@ -100,5 +100,9 @@ int append_hexa_code(char, char[], int);
 int is_digit(char);
 long int convert_size_number(long int num, int size);
 long int convert_size_unsgnd(unsigned long int num, int size);
+
+
+int print_pointer(va_list types, char buffer[],
+int flags, int width, int precision, int size);
 
 #endif
