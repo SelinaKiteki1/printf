@@ -19,7 +19,7 @@ int handle_print(const char *fmt, int *ind, va_list list, char buffer[],
 		{'c', print_char}, {'s', print_string}, {'%', print_percent},
 		{'i', print_int}, {'d', print_int}, {'b', print_binary},
 		{'u', print_unsigned}, {'o', print_octal}, {'x', print_hexadecimal},
-		{'X', print_hexa_upper}, {'p', print_pointer}, {'S', print_non_printable},
+		{'X', print_hexa_upper}, {'p', print_pointer}, {'s', print_non_printable},
 		{'r', print_reverse}, {'R', print_rot13string}, {'\0', NULL}
 	};
 	for (i = 0; fmt_types[i].fmt != '\0'; i++)
@@ -45,30 +45,4 @@ int handle_print(const char *fmt, int *ind, va_list list, char buffer[],
 	return (unknow_len);
 	}
 	return (printed_chars);
-}
-get_size.c
-#include "main.h"
-
-/**
-* get_size - Calculates the size to give the argument in the function
-* @format:string to print arguments in the function
-* @i: List of all the  arguments to be printed in the function.
-* Return:(Precision).
-*/
-int get_size(const char *format, int *i)
-{
-int curr_i = *i + 1;
-int size = 0;
-
-if (format[curr_i] == 'l')
-size = S_LONG;
-else if (format[curr_i] == 'h')
-size = S_SHORT;
-
-if (size == 0)
-*i = curr_i - 1;
-else
-*i = curr_i;
-
-return (size);
 }
