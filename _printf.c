@@ -67,8 +67,8 @@ return (printed_chars);
 }
 
 /**
-* print_buffer - Prints the contents of the buffer if it exist
-* @buffer: Array of characters (chars)
+* print_buffer - Prints the contents of the buffer if it exist in the function
+* @buffer: Array of characters (chars) in the function
 * @buff_index: Index at which to add next char, represents the length.
 */
 void print_buffer(char buffer[], int *buff_index)
