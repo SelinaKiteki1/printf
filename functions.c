@@ -145,7 +145,7 @@ return (write_number(is_negative, i, buffer, flags, width, precision, size));
 * @flags:  Calculates active flags in the function .
 * @width: get width or is a width specifier .
 * @precision: Precision specification
-* @size: Size specifier in the function
+* @size: Size specifier in the function in the function
 * Return: Num_of_chars_printed
 */
 
