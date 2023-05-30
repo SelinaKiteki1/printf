@@ -140,7 +140,7 @@ return (count);
 * @types: List all the arguments in the function
 * @buffer: Buffer array to handle the print function
 * @flags:  Calculates active flags in the function
-* @width: get width or is a width specifier
+* @width: get width or is a width specifier in the function
 * @precision: Precision specification
 * @size: Size specifier in the function
 * Return: Num_of_chars_printed.
